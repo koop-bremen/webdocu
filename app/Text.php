@@ -1,0 +1,18 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Text extends Model
+{
+
+    protected $hidden = array('created_at', 'updated_at');
+    
+    public function contentPart()
+    {
+
+    	return $this->belongsTo('App\ContentPart');
+
+    }
+}
